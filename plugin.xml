@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="nl.x-services.plugins.cordovaSharePlugin"
+        version="4.3.19-dev">
+
+  <name>CordovaSharePlugin</name>
+
+  <description>
+    A share plugin for cordova made by Cliffe
+  </description>
+
+  <author>Cliffe</author>
+
+  <license>MIT</license>
+
+  <keywords>Share, Cordova</keywords>
+
+  <repo>https://github.com/cliffzxc/CordovaSharePlugin.git</repo>
+
+  <issue>https://github.com/cliffzxc/CordovaSharePlugin/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/CDVSharePlugin.js" name="CDVSharePlugin">
+    <clobbers target="window.plugins.CDVSharePlugin" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="CDVSharePlugin">
+        <param name="ios-package" value="CDVSharePlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVSharePlugin.h"/>
+    <source-file src="src/ios/CDVSharePlugin.m"/>
+
+    <framework src="ImageIO.framework" weak="true" />
+    <framework src="Security.framework" weak="true" />
+    <framework src="SystemConfiguration.framework" weak="true" />
+    <framework src="CoreGraphics.framework" weak="true" />
+    <framework src="CoreTelephony.framework" weak="true" />
+    <framework src="libsqlite3.dylib" weak="true" />
+    <framework src="libstdc++.dylib" weak="true" />
+    <framework src="libz.dylib" weak="true" />
+    <framework src="libiconv.dylib" weak="true" />
+  </platform>
+
+  <!-- android -->
+  <!--<platform name="android">-->
+
+    <!--<config-file target="res/xml/config.xml" parent="/*">-->
+      <!--<feature name="SocialSharing">-->
+        <!--<param name="android-package" value="nl.xservices.plugins.SocialSharing" />-->
+      <!--</feature>-->
+    <!--</config-file>-->
+
+    <!--<config-file target="AndroidManifest.xml" parent="/*">-->
+      <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--</config-file>-->
+
+    <!--<source-file src="src/android/nl/xservices/plugins/SocialSharing.java" target-dir="src/nl/xservices/plugins"/>-->
+  <!--</platform>-->
+
+  <!-- wp8 -->
+  <!--<platform name="wp8">-->
+    <!--<config-file target="config.xml" parent="/*">-->
+      <!--<feature name="SocialSharing">-->
+        <!--<param name="wp-package" value="SocialSharing"/>-->
+      <!--</feature>-->
+    <!--</config-file>-->
+
+    <!--<source-file src="src/wp8/SocialSharing.cs" />-->
+  <!--</platform>-->
+  <!---->
+  <!--&lt;!&ndash; windows &ndash;&gt;-->
+  <!--<platform name="windows">-->
+    <!--<js-module src="src/windows/SocialSharingProxy.js" name="SocialSharingProxy">-->
+      <!--<merges target="" />-->
+    <!--</js-module>-->
+    <!--<source-file src="" />-->
+  <!--</platform>-->
+
+</plugin>
