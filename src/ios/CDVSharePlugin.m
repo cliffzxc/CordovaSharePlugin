@@ -18,8 +18,12 @@
     
     NSString* text = [[NSString alloc] initWithString:[command argumentAtIndex:0 withDefault:@" "]];
     NSString* imgSrc = [[NSString alloc] initWithString:[command argumentAtIndex:1 withDefault:@"logo.png"]];
+    if ([imgSrc hasPrefix:@"file://"]) {
+            imgSrc = [imgSrc substringFromIndex:7];
+    }
     NSString* url = [[NSString alloc] initWithString:[command argumentAtIndex:2 withDefault:@"null"]];
-    
+
+
 //    [[[UIAlertView alloc]initWithTitle:@" " message:imgSrc delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 //    [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:url];
     [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
