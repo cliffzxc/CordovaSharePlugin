@@ -29,7 +29,7 @@
     [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
     [UMSocialData defaultData].extConfig.wechatTimelineData.url = url;
 
-    [UMSocialSnsService presentSnsIconSheetView:[super viewController] appKey:nil shareText:text shareImage:[UIImage imageNamed:imgSrc] shareToSnsNames:[NSArray arrayWithObjects:UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,nil] delegate:nil];
+    [UMSocialSnsService presentSnsIconSheetView:[super viewController] appKey:nil shareText:text shareImage:[UIImage imageNamed:imgSrc] shareToSnsNames:[NSArray arrayWithObjects:UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToSina,nil] delegate:nil];
     
     [self.commandDelegate runInBackground:^{
 
