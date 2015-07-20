@@ -23,12 +23,6 @@
             imgSrc = [imgSrc substringFromIndex:7];
         }
 
-    //    NSArray* locala = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //    NSString* local = [[locala objectAtIndex:0] stringByAppendingPathComponent:@"0.jpg"];
-    //    [[[UIAlertView alloc]initWithTitle:@" " message:local delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-
-    //    [[[UIAlertView alloc]initWithTitle:@" " message:imgSrc delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-    //    [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:url];
         [UMSocialData defaultData].extConfig.wechatSessionData.url = url;
         [UMSocialData defaultData].extConfig.wechatTimelineData.url = url;
 
