@@ -7,9 +7,9 @@
 ###1、将UMSocial_Sdk_4.X.X文件夹添加入工程。
 ###2、将UMSocial_Sdk_Extra_Frameworks文件夹添加入工程，里面需要至少加入SinaSSO、Wechar文件夹。
 ###3、在AppDelegate中设置友盟的AppKey：
-#import "UMSocial.h"
-#import "UMSocialWechatHandler.h"
-#import "UMSocialSinaSSOHandler.h"
+\#import "UMSocial.h"
+\#import "UMSocialWechatHandler.h"
+\#import "UMSocialSinaSSOHandler.h"
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [UMSocialData setAppKey:@“XXXXXXXXXXX”];
